@@ -1,0 +1,55 @@
+#Choose Method
+
+clear
+
+while :
+do
+
+  clear
+
+  echo "Porting Tools for Basic ROM Porting "
+  echo "------------------------------------------------ "
+  echo
+  echo "You can choose between two methods..." 
+  echo 
+  echo "Method A - standard way"
+  echo "-> Copies all the necessary files from base_rom to port_rom"
+  echo
+  echo "Method B - framework porting"
+  echo "-> Coming Soon"
+  echo
+  echo "  a = Method A  "
+  echo "  b = Method B  "
+  echo
+  echo "  x = Exit"
+  echo 
+  echo -n "// "
+
+   read enterLetter
+
+  if [ "$enterLetter" == "a" ]
+  then
+    scripts/change_device
+
+    
+    if [ "$?" == "1" ]
+    then
+      continue
+    fi
+
+  elif [ "$enterLetter" == "e" ]
+  then
+  elif [ "$enterLetter" == "b" ]
+  then
+    scripts/method_b
+  elif [ "$enterLetter" == "x" ]
+  then
+    exit 0
+  else 
+    echo "Invalid option"
+    continue
+  fi
+
+  scripts/press_enter
+
+done

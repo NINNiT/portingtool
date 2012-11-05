@@ -1,0 +1,46 @@
+#!/bin/bash
+
+clear
+
+while :
+do
+
+  clear
+
+echo "<<<<ZTE Porting Tool Updater>>>>"
+echo
+echo "Downloading latest version..."
+	cd 
+	mkdir portingtool_new
+	cd portingtool_new
+	wget https://github.com/XMasterNinni/zte_porting_tool/zipball/master
+	unzip master
+	rm master
+	cd dir
+	sh portingtool.sh
+
+read enterLetter
+
+  if [ "$enterLetter" == "a" ]
+  then
+    scripts/credits
+    
+    if [ "$?" == "1" ]
+    then
+      continue
+    fi
+
+  elif [ "$enterLetter" == "e" ]
+  then
+    scripts/call_extract_kernel_and_modules
+  elif [ "$enterLetter" == "x" ]
+  then
+    exit 0
+  else 
+    echo "Invalid option"
+    continue
+  fi
+
+  scripts/press_enter
+
+done

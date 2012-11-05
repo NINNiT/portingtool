@@ -1,0 +1,54 @@
+clear
+
+while :
+do
+
+  clear
+
+  echo 
+  echo "-> You have to port the SAME Version of Android! So, if you" 
+  echo "   want to port a 2.3.5 ROM you can't use a CM7 ROM (2.3.7)"
+  echo "   as your base."
+  echo "-> This tool will generate you a booting-up ROM"
+  echo "   Nothing more." 
+  echo "-> This tool just does the basic porting process." 
+  echo "   It copies all the needed libs/bins and files."  
+  echo "-> A porters best friend is adb logcat. It comes "  
+  echo "   with the Android SDK and will help you finding "  
+  echo "   the source of lots of bugs."
+  echo "-> You can of course ask in the forums for help! Someone out"
+  echo "   there will be with you!"
+  echo "-> You can release your port as long as the credits keep "
+  echo "   intact!"
+  echo
+  echo "  x = Exit"
+  echo 
+  echo -n "// "
+
+   read enterLetter
+
+  if [ "$enterLetter" == "a" ]
+  then
+ 
+
+    
+    if [ "$?" == "1" ]
+    then
+      continue
+    fi
+
+  elif [ "$enterLetter" == "e" ]
+  then
+    scripts/call_extract_kernel_and_modules
+  elif [ "$enterLetter" == "x" ]
+  then
+    exit 0
+  else 
+    echo "Invalid option"
+    continue
+  fi
+
+  scripts/press_enter
+
+done
+

@@ -1,0 +1,54 @@
+====================================
+ZTE Porting Tools
+====================================
+
+
+*******************************
+	Read before use
+*******************************
+
+You'll have to wait until the tool tells you to obtain the ROM. If 
+you put the ROM into the folder earlier, it will get DELETED!
+
+
+*****************************
+Install Instructions
+*****************************
+
+<<Which OS can run ZTE Porting Tools?>>
+ 
+-> Linux (Ubuntu 11.10 recommended)
+-> Windows with Cygwin or a Virtual Machine like Virtual Box
+
+
+*LINUX (Ubuntu 11.10)*
+
+1) Unpack the tar.gz file to your home folder.
+2) There are different ways to start ZPT.
+ 2.1) Start ZPT by double-click on the "portingtool.sh" file.
+ 2.2) Start ZPT by cd to the "portingtool" directory. Then type ./portingtool.sh (recommended)
+3) Type in your sudo password, when prompt.
+4) Victory.
+
+*WINDOWS (Cygwin)*
+
+1) Install "Cygwin". Visit the xda page of dsixda's Android Kitchen to get more info on that.
+2) Extract the portingtool archive to Cygwin/home/your_user_name
+3) Start Cygwin
+4) Type "cd portingtool" without the ""!
+5) Type "./portingtool.sh" without the ""!
+6) Victory.
+
+*WINDOWS (Virtual Box)*
+
+1) Install Virtual Box with Ubuntu 11.10. There are plenty of tutorials in the web, so just search for them.
+2) Follow the instruction for Linux.
+3) Victory.
+
+=======
+ Team
+=======
+* XMasterNinni (Founder, Developer)
+* Dazzozo (Developer)
+* muhahahaah (Developer, Online Porting Tool)
+* tilal6991 (Developer)

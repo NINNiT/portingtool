@@ -1,0 +1,47 @@
+
+clear
+
+while :
+do
+
+  clear
+
+echo "----------------------------------------------"
+echo "(1) Grab the ROM you want to port"
+echo "----------------------------------------------"
+echo
+echo "As you can see, there are two folders in the home" 
+echo "directory of this tool." 
+echo "Now, grab the ROM you want to port to your device and unzip it"
+echo "to the <port_rom> folder."
+echo
+echo "-----------------------------------------------"
+echo "(2) Grab the ROM you want to use as base"
+echo "-----------------------------------------------"
+echo
+echo "Unzip the ROM you want to use as the base ROM to the <base_rom> "
+echo "folder.  If everything is correct, continue." 
+echo
+echo "a = Continue."
+echo "x = Exit"
+
+ chmod a+x scripts/extract_files
+
+read enterLetter
+
+  if [ "$enterLetter" == "a" ]
+  then scripts/extract_files
+
+    
+
+  elif [ "$enterLetter" == "x" ]
+  then
+    exit 0
+  else 
+    echo "Invalid option"
+    continue
+  fi
+
+  scripts/press_enter
+
+done

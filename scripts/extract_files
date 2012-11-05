@@ -1,0 +1,155 @@
+#!/bin/bash
+
+clear
+
+while :
+do
+
+  clear
+
+echo "-------------------Porting Process---------------------------"
+
+#META_INF
+echo "Copying files...<META_INF>"
+sudo cp -r base_rom/META-INF port_rom
+
+#boot.img
+echo "Copying files...<boot.img>"
+cp base_rom/boot.img port_rom
+
+#Binaries
+echo "Copying files...</system/bin>"
+cp base_rom/system/bin/akmd2 port_rom/system/bin
+cp base_rom/system/bin/am port_rom/system/bin
+cp base_rom/system/bin/bmgr port_rom/system/bin
+cp base_rom/system/bin/hci_qcomm_init port_rom/system/bin
+cp base_rom/system/bin/hciattach port_rom/system/bin
+cp base_rom/system/bin/ime port_rom/system/bin
+cp base_rom/system/bin/input port_rom/system/bin
+cp base_rom/system/bin/monkey port_rom/system/bin
+cp base_rom/system/bin/pm port_rom/system/bin
+cp base_rom/system/bin/port-bridge port_rom/system/bin
+cp base_rom/system/bin/qmuxd port_rom/system/bin
+cp base_rom/system/bin/hci_qcomm_init port_rom/system/bin
+cp base_rom/system/bin/rild port_rom/system/bin
+cp base_rom/system/bin/wlanmac port_rom/system/bin
+cp base_rom/system/bin/wlantool port_rom/system/bin
+cp base_rom/system/bin/wpa_supplicant port_rom/system/bin
+
+#/system/etc
+echo "Copying files...</system/etc>"
+cp -r base_rom/system/etc/bluetooth port_rom/system/etc
+cp -r base_rom/system/etc/dhcpcd port_rom/system/etc
+cp -r base_rom/system/etc/wifi port_rom/system/etc
+cp -r base_rom/system/etc/firmware port_rom/system/etc
+cp -r base_rom/system/etc/init.d port_rom/system/etc
+cp base_rom/system/etc/apns-conf.xml port_rom/system/etc
+cp base_rom/system/etc/dbus.conf port_rom/system/etc
+cp base_rom/system/etc/fw_4330b1.bin port_rom/system/etc
+cp base_rom/system/etc/fw_4330b2.bin port_rom/system/etc
+cp base_rom/system/etc/fw_4330_b1_apsta.bin port_rom/system/etc
+cp base_rom/system/etc/fw_4330_b2_apsta.bin port_rom/system/etc
+cp base_rom/system/etc/nv_4330b1.txt port_rom/system/etc
+cp base_rom/system/etc/nv_4330b2.txt port_rom/system/etc
+cp base_rom/system/etc/gps.conf port_rom/system/etc
+cp base_rom/system/etc/hosts port_rom/system/etc
+cp base_rom/system/etc/init.bt.sh port_rom/system/etc
+cp base_rom/system/etc/init.local.rc port_rom/system/etc
+cp base_rom/system/etc/init.qcom.bt.sh port_rom/system/etc
+cp base_rom/system/etc/init.goldfish.sh port_rom/system/etc
+cp base_rom/system/etc/media_profiles.xml port_rom/system/etc
+cp base_rom/system/etc/resolv.conf port_rom/system/etc
+cp base_rom/system/etc/sysctl.conf port_rom/system/etc
+cp base_rom/system/etc/vold.fstab port_rom/system/etc
+
+#Libs
+echo "Copying files...</system/lib>"
+cp -r base_rom/system/lib/modules port_rom/system/lib
+cp -r base_rom/system/lib/hw port_rom/system/lib
+cp base_rom/system/lib/egl/egl.cfg port_rom/system/lib/egl
+cp base_rom/system/lib/egl/libEGL_adreno200.so port_rom/system/lib/egl
+cp base_rom/system/lib/egl/libGLESv1_CM_adreno200.so port_rom/system/lib/egl
+cp base_rom/system/lib/egl/libGLESv2_adreno200.so port_rom/system/lib/egl
+cp base_rom/system/lib/egl/libq3dtools_adreno200.so port_rom/system/lib/egl
+cp base_rom/system/lib/libauth.so port_rom/system/lib
+cp base_rom/system/lib/libcm.so port_rom/system/lib
+cp base_rom/system/lib/libdiag.so port_rom/system/lib
+cp base_rom/system/lib/libdbus.so port_rom/system/lib
+cp base_rom/system/lib/libdss.so port_rom/system/lib
+cp base_rom/system/lib/libdsm.so port_rom/system/lib
+cp base_rom/system/lib/libgsl.so port_rom/system/lib
+cp base_rom/system/lib/libgstk_exp.so port_rom/system/lib
+cp base_rom/system/lib/libmmgsdilib.so port_rom/system/lib
+cp base_rom/system/lib/libmmipl.so port_rom/system/lib
+cp base_rom/system/lib/libmiscta.so port_rom/system/lib
+cp base_rom/system/lib/libmmjpeg.so port_rom/system/lib
+cp base_rom/system/lib/libhardware_legacy.so port_rom/system/lib
+cp base_rom/system/lib/libnv.so port_rom/system/lib
+cp base_rom/system/lib/liboemcamera.so port_rom/system/lib
+cp base_rom/system/lib/liboem_rapi.so port_rom/system/lib
+cp base_rom/system/lib/liboncrpc.so port_rom/system/lib
+cp base_rom/system/lib/libpbmlib.so port_rom/system/lib
+cp base_rom/system/lib/libqmi.so port_rom/system/lib
+cp base_rom/system/lib/libqueue.so port_rom/system/lib
+cp base_rom/system/lib/libril.so port_rom/system/lib
+cp base_rom/system/lib/libril-qc-1.so port_rom/system/lib
+cp base_rom/system/lib/libuim.so port_rom/system/lib
+cp base_rom/system/lib/libui.so port_rom/system/lib
+cp base_rom/system/lib/libwms.so port_rom/system/lib
+cp base_rom/system/lib/libwmsts.so port_rom/system/lib
+cp base_rom/system/lib/dhd.ko port_rom/system/lib
+
+#keychars
+echo "Copying keychars..."
+cp -r base_rom/system/usr/keychars port_rom/system/usr
+
+#keylayout
+echo "Coypying keylayout..."
+cp -r base_rom/system/usr/keylayout port_rom/system/usr
+
+#build.prop
+echo "Editing build.prop..."
+cp base_rom/system/build.prop port_rom/system
+
+#Finish
+echo "Finished copying!"
+echo
+echo
+echo
+echo
+echo
+echo
+echo
+echo "Zipping <port_rom>"
+
+cd port_rom
+zip -r Port.zip META-INF system boot.img
+
+echo
+echo "Your zip is here: /port_rom/Port.zip"
+echo "Just flash the zip in a recovery."
+echo 
+echo "To finish, close the terminal now."
+
+read enterLetter
+
+  if [ "$enterLetter" == "x" ]
+  then
+    scripts/change_device
+    
+    if [ "$?" == "1" ]
+    then
+      continue
+    fi
+
+  elif [ "$enterLetter" == "x" ]
+  then
+    scripts/change_device
+  else 
+    echo "Invalid option"
+    continue
+  fi
+
+  scripts/press_enter
+
+done

@@ -1,0 +1,47 @@
+#!/bin/bash
+
+clear
+
+while :
+do
+
+  clear
+echo "Team:"
+echo
+echo "-> XMasterNinni (Owner)"
+echo "-> Dazozzo"
+echo "-> muhahahaah"
+echo "-> tilal6991"
+echo
+echo "Credits:"
+echo
+echo "-> dsixda for helping me in Bash/Shell Scripting"
+echo "-> KonstaT for giving me some tips in porting" 
+echo
+echo "x = Exit"
+
+read enterLetter
+
+  if [ "$enterLetter" == "a" ]
+  then
+    scripts/credits
+    
+    if [ "$?" == "1" ]
+    then
+      continue
+    fi
+
+  elif [ "$enterLetter" == "e" ]
+  then
+    scripts/call_extract_kernel_and_modules
+  elif [ "$enterLetter" == "x" ]
+  then
+    exit 0
+  else 
+    echo "Invalid option"
+    continue
+  fi
+
+  scripts/press_enter
+
+done
