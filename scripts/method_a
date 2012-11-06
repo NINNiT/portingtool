@@ -6,6 +6,10 @@ do
 
   clear
 
+echo "#########################"
+echo "Method A - Standard Porting"
+echo "#########################"
+echo
 echo "----------------------------------------------"
 echo "(1) Grab the ROM you want to port"
 echo "----------------------------------------------"
@@ -25,7 +29,7 @@ echo
 echo "a = Continue."
 echo "x = Exit"
 
- chmod a+x scripts/extract_files
+ chmod a+x scripts/extract_files_a
 
 read enterLetter
 

@@ -8,7 +8,7 @@ do
   clear
 
   echo "Porting Tools for Basic ROM Porting "
-  echo "------------------------------------------------ "
+  echo "------------------------------------------ "
   echo
   echo "You can choose between two methods..." 
   echo 
@@ -16,7 +16,7 @@ do
   echo "-> Copies all the necessary files from base_rom to port_rom"
   echo
   echo "Method B - framework porting"
-  echo "-> Coming Soon"
+  echo "-> Copies framework files from port_rom to base_rom"
   echo
   echo "  a = Method A  "
   echo "  b = Method B  "
@@ -28,20 +28,11 @@ do
    read enterLetter
 
   if [ "$enterLetter" == "a" ]
-  then
-    scripts/change_device
+  then scripts/method_a
 
-    
-    if [ "$?" == "1" ]
-    then
-      continue
-    fi
+ elif [ "$enterLetter" == "b" ]
+  then scripts/method_b
 
-  elif [ "$enterLetter" == "e" ]
-  then
-  elif [ "$enterLetter" == "b" ]
-  then
-    scripts/method_b
   elif [ "$enterLetter" == "x" ]
   then
     exit 0

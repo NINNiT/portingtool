@@ -1,0 +1,55 @@
+#!/bin/bash
+
+clear
+
+while :
+do
+
+  clear
+
+echo "-------------------Porting Process---------------------------"
+
+
+
+#Finish
+echo "Finished copying!"
+echo
+echo
+echo
+echo
+echo
+echo
+echo
+echo "Zipping <port_rom>"
+
+cd port_rom
+zip -r Port.zip META-INF system boot.img
+
+echo
+echo "Your zip is here: /port_rom/Port.zip"
+echo "Just flash the zip in a recovery."
+echo 
+echo "To finish, close the terminal now."
+
+read enterLetter
+
+  if [ "$enterLetter" == "x" ]
+  then
+    scripts/change_device
+    
+    if [ "$?" == "1" ]
+    then
+      continue
+    fi
+
+  elif [ "$enterLetter" == "x" ]
+  then
+    scripts/change_device
+  else 
+    echo "Invalid option"
+    continue
+  fi
+
+  scripts/press_enter
+
+done

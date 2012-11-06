@@ -6,6 +6,10 @@ do
 
   clear
 
+echo "#########################"
+echo "Method B  - Framework Porting"
+echo "#########################"
+echo
 echo "----------------------------------------------"
 echo "(1) Grab the ROM you want to port"
 echo "----------------------------------------------"
@@ -19,12 +23,13 @@ echo "-----------------------------------------------"
 echo "(2) Grab the ROM you want to use as base"
 echo "-----------------------------------------------"
 echo
-echo "Unzip the ROM you want to use as the base ROM to the <base_rom> echo "folder. It should 
+echo "Unzip the ROM you want to use as the base ROM to the <base_rom> "
+echo "folder.  If everything is correct, continue." 
 echo
 echo "a = Continue."
 echo "x = Exit"
 
- chmod a+x scripts/extract_files
+ chmod a+x scripts/extract_files_b
 
 read enterLetter
 
